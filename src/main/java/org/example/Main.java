@@ -8,15 +8,24 @@ final class Main {
 
     private Main() {
     }
-
     public static void main(final String[] args) {
-        System.out.println("Fib-Recursion(" + N + ") = "
-                + FIBONACCI.recursion(N));
+        fibRecursion(N);
+        fibIteration(N);
+        fibDynamic(N);
+    }
 
-        System.out.println("Fib-Iteration(" + N + ") = "
-                + FIBONACCI.iteration(N));
+    private static void fibRecursion(final int n) {
+        System.out.println("Fib-Recursion(" + n + ") = "
+                + FIBONACCI.recursion(n));
+    }
 
-        System.out.println("Fib-Dynamic(" + N + ") = "
-                + FIBONACCI.dynamic(N));
+    private static void fibIteration(final int n) {
+        System.out.println("Fib-Iteration(" + n + ") = "
+                + FIBONACCI.iteration(n));
+    }
+
+    private static void fibDynamic(final int n) {
+        System.out.println("Fib-Dynamic(" + n + ") = "
+                + FIBONACCI.dynamic(n));
     }
 }
