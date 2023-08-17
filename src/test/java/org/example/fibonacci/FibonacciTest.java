@@ -1,4 +1,4 @@
-package org.example;
+package org.example.fibonacci;
 
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ class FibonacciTest {
         final Fibonacci fibonacci = new Fibonacci();
 
         //When && Then
-        assertEquals(55, fibonacci.dynamic(10));
+        assertEquals(13, fibonacci.dynamic(7));
     }
 
     @Test
@@ -21,7 +21,7 @@ class FibonacciTest {
         final Fibonacci fibonacci = new Fibonacci();
 
         //When && Then
-        assertEquals(55, fibonacci.iteration(10));
+        assertEquals(5, fibonacci.iteration(5));
     }
 
     @Test
