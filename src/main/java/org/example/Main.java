@@ -10,7 +10,7 @@ final class Main {
 
     public static void main(final String[] args) {
         PRINT_FB.execute("recursion", 10);
-        PRINT_FB.execute("iteration", 13);
-        PRINT_FB.execute("dynamic", 25);
+        PRINT_FB.execute("iteration", 25);
+        PRINT_FB.execute("dynamic", 7);
     }
 }

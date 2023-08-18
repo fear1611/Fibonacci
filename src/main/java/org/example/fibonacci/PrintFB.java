@@ -9,12 +9,11 @@ public final class PrintFB implements Print {
 
     @Override
     public void execute(final String method, final int n) {
-        if (method.equalsIgnoreCase("recursion")) {
-            recursion(n);
-        } else if (method.equalsIgnoreCase("iteration")) {
-            iteration(n);
-        } else if (method.equalsIgnoreCase("dynamic")) {
-            dynamic(n);
+        switch (method.toLowerCase()) {
+            case "recursion" -> recursion(n);
+            case "iteration" -> iteration(n);
+            case "dynamic" -> dynamic(n);
+            default -> throw new IllegalStateException("Unexpected value: " + method.toLowerCase());
         }
     }
 
