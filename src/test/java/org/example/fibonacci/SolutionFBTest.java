@@ -4,32 +4,32 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class FibonacciTest {
+class SolutionFBTest {
 
     @Test
     void testDynamic() {
         //Given
-        final Fibonacci fibonacci = new Fibonacci();
+        final SolutionFB solutionFB = new SolutionFB();
 
         //When && Then
-        assertEquals(13, fibonacci.dynamic(7));
+        assertEquals(13, solutionFB.dynamic(7));
     }
 
     @Test
     void testIteration() {
         //Given
-        final Fibonacci fibonacci = new Fibonacci();
+        final SolutionFB solutionFB = new SolutionFB();
 
         //When && Then
-        assertEquals(5, fibonacci.iteration(5));
+        assertEquals(5, solutionFB.iteration(5));
     }
 
     @Test
     void testRecursion() {
         //Given
-        final Fibonacci fibonacci = new Fibonacci();
+        final SolutionFB solutionFB = new SolutionFB();
 
         //When && Then
-        assertEquals(55, fibonacci.recursion(10));
+        assertEquals(55, solutionFB.recursion(10));
     }
 }

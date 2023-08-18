@@ -4,13 +4,17 @@ import java.time.Duration;
 import java.time.LocalTime;
 
 public final class PrintFB {
-    private static final Fibonacci FIBONACCI = new Fibonacci();
+    private static final SolutionFB SOLUTION_FB = new SolutionFB();
     private static final String DURATION = "Duration - ";
+
+    public void execute() {
+
+    }
 
     public void recursion(final int n) {
         LocalTime timeStart = LocalTime.now();
         System.out.println("\nFib-Recursion(" + n + ") = "
-                + FIBONACCI.recursion(n));
+                + SOLUTION_FB.recursion(n));
         LocalTime timeEnd = LocalTime.now();
 
         Duration duration = Duration.between(timeStart, timeEnd);
@@ -22,7 +26,7 @@ public final class PrintFB {
     public void iteration(final int n) {
         LocalTime timeStart = LocalTime.now();
         System.out.println("\nFib-Iteration(" + n + ") = "
-                + FIBONACCI.iteration(n));
+                + SOLUTION_FB.iteration(n));
         LocalTime timeEnd = LocalTime.now();
 
         Duration duration = Duration.between(timeStart, timeEnd);
@@ -34,7 +38,7 @@ public final class PrintFB {
     public void dynamic(final int n) {
         LocalTime timeStart = LocalTime.now();
         System.out.println("\nFib-Dynamic(" + n + ") = "
-                + FIBONACCI.dynamic(n));
+                + SOLUTION_FB.dynamic(n));
         LocalTime timeEnd = LocalTime.now();
 
         Duration duration = Duration.between(timeStart, timeEnd);
