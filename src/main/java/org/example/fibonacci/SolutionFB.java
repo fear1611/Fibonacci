@@ -7,7 +7,7 @@ final class SolutionFB implements Fibonacci {
     private static final Map<Integer, Long> MEMO = new HashMap<>();
 
     @Override
-    public long dynamic(final int n) {
+     public long dynamic(final int n) {
         if (n <= 1) {
             return n;
         }

@@ -8,7 +8,7 @@ public final class PrintFB implements Print {
     private static final SolutionFB SOLUTION_FB = new SolutionFB();
 
     @Override
-    public void execute(String method, int n) {
+    public void execute(final String method, final int n) {
         if (method.equalsIgnoreCase("recursion")) {
             recursion(n);
         } else if (method.equalsIgnoreCase("iteration")) {
