@@ -6,9 +6,8 @@ import java.util.Map;
 final class SolutionFB implements Fibonacci {
     private static final Map<Integer, Long> MEMO = new HashMap<>();
 
-
     @Override
-    public long dynamic(int n) {
+    public long dynamic(final int n) {
         if (n <= 1) {
             return n;
         }
@@ -24,7 +23,7 @@ final class SolutionFB implements Fibonacci {
     }
 
     @Override
-    public long iteration(int n) {
+    public long iteration(final int n) {
         int n1 = 0;
         int n2 = 1;
         int result = n;
@@ -39,7 +38,7 @@ final class SolutionFB implements Fibonacci {
     }
 
     @Override
-    public long recursion(int n) {
+    public long recursion(final int n) {
         if (n <= 1) {
             return n;
         }

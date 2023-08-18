@@ -1,7 +1,7 @@
 package org.example.fibonacci;
 
 public interface Fibonacci {
-    long dynamic(final int n);
-    long iteration(final int n);
-    long recursion(final int n);
+    long dynamic(int n);
+    long iteration(int n);
+    long recursion(int n);
 }
