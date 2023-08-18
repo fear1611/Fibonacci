@@ -10,14 +10,14 @@ public final class PrintFB implements Print {
     @Override
     public void execute(final String method, final int n) {
         switch (method.toLowerCase()) {
-            case "recursion" -> recursion(n);
-            case "iteration" -> iteration(n);
-            case "dynamic" -> dynamic(n);
+            case "recursion" -> printRecursion(n);
+            case "iteration" -> printIteration(n);
+            case "dynamic" -> printDynamic(n);
             default -> throw new IllegalStateException("Unexpected value: " + method.toLowerCase());
         }
     }
 
-    private void recursion(final int n) {
+    private void printRecursion(final int n) {
         LocalTime timeStart = LocalTime.now();
         System.out.println("\nFib-Recursion(" + n + ") = "
                 + SOLUTION_FB.recursion(n));
@@ -29,7 +29,7 @@ public final class PrintFB implements Print {
         System.out.println("Spatial complexity - O(n)\n" + "Time complexity - O(2^n)");
     }
 
-    private void iteration(final int n) {
+    private void printIteration(final int n) {
         LocalTime timeStart = LocalTime.now();
         System.out.println("\nFib-Iteration(" + n + ") = "
                 + SOLUTION_FB.iteration(n));
@@ -41,7 +41,7 @@ public final class PrintFB implements Print {
         System.out.println("Spatial complexity - O(1)\n" + "Time complexity - O(n)");
     }
 
-    private void dynamic(final int n) {
+    private void printDynamic(final int n) {
         LocalTime timeStart = LocalTime.now();
         System.out.println("\nFib-Dynamic(" + n + ") = "
                 + SOLUTION_FB.dynamic(n));
