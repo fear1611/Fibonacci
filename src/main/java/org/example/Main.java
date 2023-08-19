@@ -9,8 +9,8 @@ final class Main {
     }
 
     public static void main(final String[] args) {
-        PRINT_FB.recursion(25);
-        PRINT_FB.iteration(15);
-        PRINT_FB.dynamic(9);
+        PRINT_FB.execute("recursion", 25);
+        PRINT_FB.execute("iteration", -10);
+        PRINT_FB.execute("dynamic", 0);
     }
 }

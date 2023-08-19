@@ -3,14 +3,24 @@ package org.example.fibonacci;
 import java.time.Duration;
 import java.time.LocalTime;
 
-public final class PrintFB {
-    private static final Fibonacci FIBONACCI = new Fibonacci();
+public final class PrintFB implements Print {
     private static final String DURATION = "Duration - ";
+    private static final SolutionFB SOLUTION_FB = new SolutionFB();
 
-    public void recursion(final int n) {
+    @Override
+    public void execute(final String method, final int n) {
+        switch (method.toLowerCase()) {
+            case "recursion" -> printRecursion(n);
+            case "iteration" -> printIteration(n);
+            case "dynamic" -> printDynamic(n);
+            default -> throw new IllegalStateException("Unexpected value: " + method.toLowerCase());
+        }
+    }
+
+    private void printRecursion(final int n) {
         LocalTime timeStart = LocalTime.now();
         System.out.println("\nFib-Recursion(" + n + ") = "
-                + FIBONACCI.recursion(n));
+                + SOLUTION_FB.recursion(n));
         LocalTime timeEnd = LocalTime.now();
 
         Duration duration = Duration.between(timeStart, timeEnd);
@@ -19,10 +29,10 @@ public final class PrintFB {
         System.out.println("Spatial complexity - O(n)\n" + "Time complexity - O(2^n)");
     }
 
-    public void iteration(final int n) {
+    private void printIteration(final int n) {
         LocalTime timeStart = LocalTime.now();
         System.out.println("\nFib-Iteration(" + n + ") = "
-                + FIBONACCI.iteration(n));
+                + SOLUTION_FB.iteration(n));
         LocalTime timeEnd = LocalTime.now();
 
         Duration duration = Duration.between(timeStart, timeEnd);
@@ -31,10 +41,10 @@ public final class PrintFB {
         System.out.println("Spatial complexity - O(1)\n" + "Time complexity - O(n)");
     }
 
-    public void dynamic(final int n) {
+    private void printDynamic(final int n) {
         LocalTime timeStart = LocalTime.now();
         System.out.println("\nFib-Dynamic(" + n + ") = "
-                + FIBONACCI.dynamic(n));
+                + SOLUTION_FB.dynamic(n));
         LocalTime timeEnd = LocalTime.now();
 
         Duration duration = Duration.between(timeStart, timeEnd);
@@ -43,3 +53,4 @@ public final class PrintFB {
         System.out.println("Spatial complexity - O(n)\n" + "Time complexity - O(2^n)");
     }
 }
+
