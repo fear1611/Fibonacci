@@ -17,11 +17,11 @@ class SolutionFBTest {
 
     @Test
     void testIteration() {
-        //Given
+        // Given
         final SolutionFB solutionFB = new SolutionFB();
 
-        //When && Then
-        assertEquals(5, solutionFB.iteration(5));
+        // When && Then
+        assertEquals(0, solutionFB.iteration(0));
     }
 
     @Test

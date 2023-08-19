@@ -24,6 +24,10 @@ final class SolutionFB implements Fibonacci {
 
     @Override
     public long iteration(final int n) {
+        if (n <= 1) {
+            return n;
+        }
+
         int n1 = 0;
         int n2 = 1;
         int result = n;
